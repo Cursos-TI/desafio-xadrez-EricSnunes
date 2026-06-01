@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int i, j;
+
+    // -----------------------------
+    // Movimento do Cavalo:
+    // Duas casas para baixo e uma para a esquerda
+    // -----------------------------
+    printf("\nMovimento do Cavalo:\n");
+
+    // Loop externo: duas casas para baixo (usando for)
+    for (i = 1; i <= 2; i++) {
+        printf("Baixo (%d)\n", i);
+
+        // Loop interno: após cada passo para baixo, verificamos se já percorremos as duas casas
+        // Quando chegamos na segunda casa, fazemos o movimento para a esquerda
+        j = i;
+        while (j == 2) { // só executa quando o cavalo já desceu duas casas
+            printf("Esquerda (1)\n");
+            j++; // encerra o loop interno
+        }
+    }
+
+    return 0;
+}
